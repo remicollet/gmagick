@@ -272,11 +272,11 @@ PHP_MINIT_FUNCTION(gmagick)
 
 	/* Exception */
 	INIT_CLASS_ENTRY(ce, "GmagickException", NULL);
-	php_gmagick_exception_class_entry = zend_register_internal_class_ex(&ce, zend_exception_get_default());
+	php_gmagick_exception_class_entry = zend_register_internal_class_ex(&ce, zend_ce_exception);
 	php_gmagick_exception_class_entry->ce_flags |= ZEND_ACC_FINAL;
 
 	INIT_CLASS_ENTRY(ce, "GmagickPixelException", NULL);
-	php_gmagickpixel_exception_class_entry = zend_register_internal_class_ex(&ce, zend_exception_get_default());
+	php_gmagickpixel_exception_class_entry = zend_register_internal_class_ex(&ce, zend_ce_exception);
 	php_gmagickpixel_exception_class_entry->ce_flags |= ZEND_ACC_FINAL;
 
 	/* Class entry */
